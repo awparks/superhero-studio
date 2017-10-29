@@ -66,3 +66,24 @@ img.placeholder {
   width: 100%;
   height: auto;
 }
+
+.superhero-wrapper .outer-wrapper {
+  width: 150px;
+  margin: 50px auto;
+  position: relative;
+}
+
+.legs-container {
+  position: absolute;
+  top: 162px;
+  left: 50%;
+  transform: translateX(-50%)
+}
+
+.head-container img,
+.body-container img,
+.legs-container img {
+  display: block;
+  font-size: 0;
+  margin: 0 auto;
+}

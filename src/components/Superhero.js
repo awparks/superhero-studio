@@ -1,30 +1,23 @@
 import React, { Component } from 'react'
-import { storage, ref } from '../config/constants'
-import firebase from 'firebase'
 
 export default class Superhero extends Component {
   constructor(props) {
     super(props)
-
-    console.log(props, this.props)    
-  }
-
-  componentDidMount() {
-    this.props.fetchImageUrl(this.props.head, 'heads')
+    console.log(props.head)
   }
 
   render() {
     return (
       <div className="outer-wrapper">
         <div className="head-container">
-          <img src="" />
+          <img src={this.props.head} />
         </div>
         <div className="body-container">
-          {/* <img src={body} /> */}
+          <img src={this.props.body} />
         </div>
-        <div className="legs-container">
-          {/* <img src={legs} /> */}
-        </div>
+         <div className="legs-container">
+          <img src={this.props.legs} />          
+        </div> 
       </div>
     )
   }
