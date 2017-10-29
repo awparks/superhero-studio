@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import Chooser from './Chooser'
-import SelectedBodyParts from '../containers/selectedBodyParts'
+// import SelectedBodyParts from '../containers/selectedBodyParts'
 import { storage, ref } from '../config/constants'
 import firebase from 'firebase'
 const placeholderImage = require('../assets/letsdothis.jpg')
@@ -50,8 +50,11 @@ export default class Home extends Component {
     const newPart = {
       selectedPart: e.target.innerHTML.toLowerCase()
     }
-    this.setState(...this.state, newPart)
-    this.getImageUrls()
+    this.setState({ selectedPart: e.target.innerHTML.toLowerCase() }, () => {
+      if (this.state[`${this.state.selectedPart}`].length === 0) {
+        this.getImageUrls()
+      }
+    })
   }
 
   render () {
@@ -64,7 +67,7 @@ export default class Home extends Component {
           <button className="bodies-btn" onClick={this.changePart}>
             Bodies
           </button>
-          <SelectedBodyParts />
+
         </div>
         <Chooser images={this.state[`${this.state.selectedPart}`]} />
       </div>

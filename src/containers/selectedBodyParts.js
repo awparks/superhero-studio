@@ -1,47 +1,47 @@
-import { connect } from 'react-redux'
-import { storage, ref } from '../config/constants'
-import firebase from 'firebase'
-import { setHead } from '../actions'
-import { fetchImageUrl } from '../reducers'
-import Superhero from '../components/Superhero'
+// import { connect } from 'react-redux'
+// import { storage, ref } from '../config/constants'
+// import firebase from 'firebase'
+// import { setHead } from '../actions'
+// import { fetchImageUrl } from '../reducers'
+// import Superhero from '../components/Superhero'
 
-// const getImage = (hero, part) => {
-//   const image = () => ref.once('value').then((snapshot) => {
-//     return (snapshot.val() && snapshot.val().superheroes[`${part}`][`${hero}`])
-//   })
+// // const getImage = (hero, part) => {
+// //   const image = () => ref.once('value').then((snapshot) => {
+// //     return (snapshot.val() && snapshot.val().superheroes[`${part}`][`${hero}`])
+// //   })
 
-//   storage.child(`${image}.png`).getDownloadURL().then((url) => {
-//     store.dispatch(setHead(url))
-//   })
-// }
+// //   storage.child(`${image}.png`).getDownloadURL().then((url) => {
+// //     store.dispatch(setHead(url))
+// //   })
+// // }
 
-const mapStateToProps = state => {
-  return {
-    head: state.selectedHead,
-    body: state.selectedBody,
-    legs: state.selectedLegs
-  }
-}
-
-const mapDispatchToProps = dispatch => {
-  return {
-    // onTodoClick: id => {
-    //   dispatch(toggleTodo(id))
-    // }
-  }
-}
-
-// const mapDispatchToProps = dispatch => {
+// const mapStateToProps = state => {
 //   return {
-//     onTodoClick: id => {
-//       dispatch(toggleTodo(id))
-//     }
+//     head: state.selectedHead,
+//     body: state.selectedBody,
+//     legs: state.selectedLegs
 //   }
 // }
 
-const SelectedBodyParts = connect(
-  mapStateToProps,
-  { fetchImageUrl }
-)(Superhero)
+// const mapDispatchToProps = dispatch => {
+//   return {
+//     // onTodoClick: id => {
+//     //   dispatch(toggleTodo(id))
+//     // }
+//   }
+// }
 
-export default SelectedBodyParts
+// // const mapDispatchToProps = dispatch => {
+// //   return {
+// //     onTodoClick: id => {
+// //       dispatch(toggleTodo(id))
+// //     }
+// //   }
+// // }
+
+// const SelectedBodyParts = connect(
+//   mapStateToProps,
+//   { fetchImageUrl }
+// )(Superhero)
+
+// export default SelectedBodyParts

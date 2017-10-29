@@ -1,7 +1,7 @@
-import { createStore } from 'redux'
-import superheroBuilder from './reducers'
-import { setHead, setBody } from './actions'
+// import { createStore } from 'redux'
+// import superheroBuilder from './reducers'
+// import { setHead, setBody } from './actions'
 
-let store = createStore(superheroBuilder)
+// let store = createStore(superheroBuilder)
 
-console.log(store.getState())
+// console.log(store.getState())
